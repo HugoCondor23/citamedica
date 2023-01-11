@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EstudiantesITQ.ListadoEstudiantes">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Listado Estudiantes" FontSize="Large" HeightRequest="50"
+                   FontAttributes="Bold"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <ListView x:Name="lstEstudiantes">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width=".1*"/>
+                                        <ColumnDefinition Width=".2*"/>
+                                        <ColumnDefinition Width=".3*"/>
+                                        <ColumnDefinition Width=".4*"/>
+                                        <ColumnDefinition Width=".5*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="5*"/>
+                                        <RowDefinition Height="2*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Text="{Binding codigo}" Grid.Column="0" 
+                                           FontAttributes="Bold" FontSize="10" />
+                                    <Label Text="{Binding nombre}" Grid.Column="1" 
+                                           FontAttributes="Bold" FontSize="10" />
+                                    <Label Text="{Binding apellido}" Grid.Column="2" 
+                                           FontAttributes="Bold" FontSize="10" />
+                                    <Label Text="{Binding correo}" Grid.Column="3" 
+                                           FontAttributes="Bold" FontSize="10" />
+                                    <Label Text="{Binding telefono}" Grid.Column="4" 
+                                           FontAttributes="Bold" FontSize="10" />
+
+
+
+
+
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button Text="Ingresar nuevo estudiante"
+                    x:Name="btnNuevoEstudiante"
+                    Clicked="btnNuevoEstudiante_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
