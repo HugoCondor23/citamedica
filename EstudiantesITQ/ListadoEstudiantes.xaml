@@ -61,6 +61,7 @@
                     x:Name="btnElimiarEstudiante"
                     Clicked="btnElimiarEstudiante_Clicked"/>
             
+            
             <Button Text="Actualizar paciente"
                     x:Name="btnActualizarEstudiante"
                     Clicked="btnActualizarEstudiante_Clicked"/>
