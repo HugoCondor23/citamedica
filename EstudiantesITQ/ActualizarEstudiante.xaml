@@ -4,12 +4,15 @@
              x:Class="EstudiantesITQ.ActualizarEstudiante">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Actualizar Estudiante"
+            <Label Text="Actualizar Pacientes"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
 
             <Grid>
                 <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
                     <RowDefinition />
                     <RowDefinition />
                     <RowDefinition />
@@ -22,14 +25,14 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-                <Label Text="Ingrese Codigo"
+                <Label Text="Ingrese Cédula"
                        Grid.Row="0"
                        Grid.Column="0"
                        FontAttributes="Bold"/>
                 <Entry x:Name="entCodigo"
                        Grid.Row="0"
                        Grid.Column="1"
-                       Placeholder="Codigo"
+                       Placeholder="Cédula"
                        Keyboard="Numeric"/>
 
                 <Label Text="Ingrese Nombre"
@@ -71,15 +74,42 @@
                        Grid.Column="1"
                        Placeholder="Telefono"
                        Keyboard="Numeric"/>
+                
+                <Label Text="Ingrese Dirección"
+                       Grid.Row="5"
+                       Grid.Column="0"
+                       FontAttributes="Bold"/>
+                <Entry x:Name="entDireccion"
+                       Grid.Row="5"
+                       Grid.Column="1"
+                       Placeholder="Direccion"
+                       Keyboard="Text"/>
+                
+                <Label Text="Ingrese Estado"
+                       Grid.Row="6"
+                       Grid.Column="0"
+                       FontAttributes="Bold"/>
+                <Entry x:Name="entEstado"
+                       Grid.Row="6"
+                       Grid.Column="1"
+                       Placeholder="Estado"
+                       Keyboard="Text"/>
+
+
+
+
+
+
+
 
                 <Button Text="Actualizar"
-                        Grid.Row="5"
-                        Grid.Column="0"
+                        Grid.Row="7"
+                        Grid.Column="1"
                         x:Name="actualizar"
                         Clicked="actualizar_Clicked"/>
 
                 <Button Text="Regresar"
-                        Grid.Row="5"
+                        Grid.Row="8"
                         Grid.Column="1"
                         x:Name="btnRegreso"
                         Clicked="btnRegreso_Clicked"/>

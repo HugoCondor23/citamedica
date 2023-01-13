@@ -1,12 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EstudiantesITQ.AgregarEstudiante"
-             NavigationPage.HasNavigationBar="False"
-             >
+             x:Class="EstudiantesITQ.AgregarCita">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Agregar Estudiante"
+            <Label Text="Agregar Cita"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
 
@@ -19,81 +17,71 @@
                     <RowDefinition />
                     <RowDefinition />
                     <RowDefinition />
-                    <RowDefinition />
+                   
                 </Grid.RowDefinitions>
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
-                <Label Text="Ingrese Cédula"
+                <Label Text="Ingrese Id Cita"
                        Grid.Row="0"
                        Grid.Column="0"
                        FontAttributes="Bold"/>
-                <Entry x:Name="entCodigo"
+                <Entry x:Name="entIdCita"
                        Grid.Row="0"
                        Grid.Column="1"
-                       Placeholder="Cédula"
+                       Placeholder="Id cita"
                        Keyboard="Numeric"/>
-
-                <Label Text="Ingrese Nombre"
+                
+                <Label Text="Cédula Paciente"
                        Grid.Row="1"
                        Grid.Column="0"
                        FontAttributes="Bold"/>
-                <Entry x:Name="entNombre"
+                <Entry x:Name="entCedulaPaciente"
                        Grid.Row="1"
                        Grid.Column="1"
-                       Placeholder="Nombre"
-                       Keyboard="Text"/>
-
-                <Label Text="Ingrese Apellido"
-                       Grid.Row="2"
-                       Grid.Column="0"
-                       FontAttributes="Bold"/>
-                <Entry x:Name="entApellido"
-                       Grid.Row="2"
-                       Grid.Column="1"
-                       Placeholder="Apellido"
-                       Keyboard="Text"/>
-
-                <Label Text="Ingrese Correo"
-                       Grid.Row="3"
-                       Grid.Column="0"
-                       FontAttributes="Bold"/>
-                <Entry x:Name="entCorreo"
-                       Grid.Row="3"
-                       Grid.Column="1"
-                       Placeholder="Correo"
-                       Keyboard="Text"/>
-
-                <Label Text="Ingrese Telefono"
-                       Grid.Row="4"
-                       Grid.Column="0"
-                       FontAttributes="Bold"/>
-                <Entry x:Name="entTelefono"
-                       Grid.Row="4"
-                       Grid.Column="1"
-                       Placeholder="Telefono"
+                       Placeholder=""
                        Keyboard="Numeric"/>
 
-                <Label Text="Ingrese Dirección"
-                       Grid.Row="5"
+                <Label Text="Ingrese Nombre Médico"
+                       Grid.Row="2"
                        Grid.Column="0"
                        FontAttributes="Bold"/>
-                <Entry x:Name="entDireccion"
-                       Grid.Row="5"
+                <Entry x:Name="entNombreMedico"
+                       Grid.Row="2"
                        Grid.Column="1"
-                       Placeholder="Direccion"
+                       Placeholder="Nombre Médico"
                        Keyboard="Text"/>
 
-                <Label Text="Ingrese Estado"
-                       Grid.Row="6"
+                <Label Text="Ingrese Especialidad"
+                       Grid.Row="3"
                        Grid.Column="0"
                        FontAttributes="Bold"/>
-                <Entry x:Name="entEstado"
-                       Grid.Row="6"
+                <Entry x:Name="entEspecialidad"
+                       Grid.Row="3"
                        Grid.Column="1"
-                       Placeholder="Estado"
+                       Placeholder="Especialidad"
+                       Keyboard="Text"/>
+
+                <Label Text="Ingrese Fecha Cita"
+                       Grid.Row="4"
+                       Grid.Column="0"
+                       FontAttributes="Bold"/>
+                <Entry x:Name="entFecha"
+                       Grid.Row="4"
+                       Grid.Column="1"
+                       Placeholder="Cita"
+                       Keyboard="Text"/>
+
+                <Label Text="Ingrese Hora Cita"
+                       Grid.Row="5"
+                       Grid.Column="0"
+                       FontAttributes="Bold"/>
+                <Entry x:Name="entHora"
+                       Grid.Row="5"
+                       Grid.Column="1"
+                       Placeholder="Hora Cita"
                        Keyboard="Text"/>
 
                 <Button Text="Insertar"
@@ -102,11 +90,7 @@
                         x:Name="insertar"
                         Clicked="insertar_Clicked"/>
 
-                <Button Text="Regresar"
-                        Grid.Row="8"
-                        Grid.Column="1"
-                        x:Name="btnRegreso"
-                        Clicked="btnRegreso_Clicked"/>
+              
 
             </Grid>
         </StackLayout>

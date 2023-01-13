@@ -4,7 +4,7 @@
              x:Class="EstudiantesITQ.EliminarEstudiamnte">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Eliminar Estudiante"
+            <Label Text="Eliminar Pacientes"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
 

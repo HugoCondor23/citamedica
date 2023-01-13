@@ -15,7 +15,7 @@ namespace EstudiantesITQ
     public partial class EliminarEstudiamnte : ContentPage
     {
 
-        private const string Url = "http://192.168.1.11/itq/post.php?codigo={0}";
+        private const string Url = "http://192.168.0.105/itq/post.php?codigo={0}";
         public EliminarEstudiamnte()
         {
             InitializeComponent();

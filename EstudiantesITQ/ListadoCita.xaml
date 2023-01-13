@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EstudiantesITQ.ListadoEstudiantes">
+             x:Class="EstudiantesITQ.ListadoCita">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Listado Pacientes" FontSize="Large" HeightRequest="50"
+            <Label Text="Listado Citas" FontSize="Large" HeightRequest="50"
                    FontAttributes="Bold"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <ListView x:Name="lstEstudiantes" SelectionMode="Single" ItemSelected="lstEstudiantes_ItemSelected">
+            <ListView x:Name="lstCitas" SelectionMode="Single">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -21,27 +21,26 @@
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
+                                        
                                     </Grid.ColumnDefinitions>
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="5*"/>
                                         <RowDefinition Height="2*"/>
                                     </Grid.RowDefinitions>
 
-                                    <Label Text="{Binding cedulapaciente}" Grid.Column="0" 
+                                    <Label Text="{Binding idcita}" Grid.Column="0" 
                                            FontAttributes="Bold" FontSize="10" />
-                                    <Label Text="{Binding nombrepaciente}" Grid.Column="1" 
+                                    <Label Text="{Binding cedulapaciente}" Grid.Column="1" 
                                            FontAttributes="Bold" FontSize="10" />
-                                    <Label Text="{Binding apellidopaciente}" Grid.Column="2" 
+                                    <Label Text="{Binding nombremedico}" Grid.Column="2" 
                                            FontAttributes="Bold" FontSize="10" />
-                                    <Label Text="{Binding correopaciente}" Grid.Column="3" 
+                                    <Label Text="{Binding especialidad}" Grid.Column="3" 
                                            FontAttributes="Bold" FontSize="10" />
-                                    <Label Text="{Binding telefonopaciente}" Grid.Column="4" 
+                                    <Label Text="{Binding fechacita}" Grid.Column="4" 
                                            FontAttributes="Bold" FontSize="10" />
-                                    <Label Text="{Binding direccionpaciente}" Grid.Column="5" 
+                                    <Label Text="{Binding horacita}" Grid.Column="5" 
                                            FontAttributes="Bold" FontSize="10" />
-                                    <Label Text="{Binding estadopaciente}" Grid.Column="6" 
-                                           FontAttributes="Bold" FontSize="10" />
+                                   
 
 
 
@@ -54,24 +53,8 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <Button Text="Ingresar nuevo paciente"
-                    x:Name="btnNuevoEstudiante"
-                    Clicked="btnNuevoEstudiante_Clicked"/>
-            <Button Text="Eliminar paciente"
-                    x:Name="btnElimiarEstudiante"
-                    Clicked="btnElimiarEstudiante_Clicked"/>
             
-            <Button Text="Actualizar paciente"
-                    x:Name="btnActualizarEstudiante"
-                    Clicked="btnActualizarEstudiante_Clicked"/>
-            
-            <Button Text="Eliminar Paciente por ID paciente"
-                    x:Name="btnEliminarId"
-                    Clicked="btnEliminarId_Clicked"/>
-            
-            <Button Text="Generar Cita"
-                    x:Name="btnCita"
-                    Clicked="btnCita_Clicked"/>
+         
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

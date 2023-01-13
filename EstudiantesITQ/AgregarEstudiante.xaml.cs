@@ -14,7 +14,7 @@ namespace EstudiantesITQ
     public partial class AgregarEstudiante : ContentPage
     {
 
-        private const string Url = "http://192.168.1.11/itq/post.php";
+        private const string Url = "http://192.168.173.27/citamedica/post.php";
 
         public AgregarEstudiante()
         {
@@ -27,15 +27,18 @@ namespace EstudiantesITQ
             try
             {
                 var parameters = new System.Collections.Specialized.NameValueCollection();
-                parameters.Add("codigo", entCodigo.Text);
-                parameters.Add("nombre", entNombre.Text);
-                parameters.Add("apellido", entApellido.Text);
-                parameters.Add("correo", entCorreo.Text);
-                parameters.Add("telefono", entTelefono.Text);
+                parameters.Add("cedulapaciente", entCodigo.Text);
+                parameters.Add("nombrepaciente", entNombre.Text);
+                parameters.Add("apellidopaciente", entApellido.Text);
+                parameters.Add("correopaciente", entCorreo.Text);
+                parameters.Add("telefonopaciente", entTelefono.Text);
+                parameters.Add("direccionpaciente", entDireccion.Text);
+                parameters.Add("estadopaciente", entEstado.Text);
 
                 client.UploadValues(Url, "POST", parameters);
-                DisplayAlert("Completado", "Estudiante Registrado: " + entNombre + " " + entApellido, "Cerrar");
                 Limpiar();
+                DisplayAlert("Completado", "Paciente Registrado: " + entNombre.Text + " " + entApellido.Text, "Cerrar");
+                
 
             } catch(Exception ex) 
             {
@@ -52,6 +55,8 @@ namespace EstudiantesITQ
             entApellido.Text = string.Empty;
             entCorreo.Text = string.Empty;
             entTelefono.Text = string.Empty;
+            entDireccion.Text = string.Empty;
+            entEstado.Text = string.Empty;
         }
 
         private async void btnRegreso_Clicked(object sender, EventArgs e)
