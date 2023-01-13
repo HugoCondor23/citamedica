@@ -14,7 +14,7 @@ namespace EstudiantesITQ
     public partial class AgregarEstudiante : ContentPage
     {
 
-        private const string Url = "http://10.20.23.200/itq/post.php";
+        private const string Url = "http://192.168.1.11/itq/post.php";
 
         public AgregarEstudiante()
         {

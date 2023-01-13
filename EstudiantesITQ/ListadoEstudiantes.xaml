@@ -8,7 +8,7 @@
                    FontAttributes="Bold"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <ListView x:Name="lstEstudiantes">
+            <ListView x:Name="lstEstudiantes" SelectionMode="Single" ItemSelected="lstEstudiantes_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -51,7 +51,15 @@
             <Button Text="Ingresar nuevo estudiante"
                     x:Name="btnNuevoEstudiante"
                     Clicked="btnNuevoEstudiante_Clicked"/>
-
+            <Button Text="Eliminar estudiante"
+                    x:Name="btnElimiarEstudiante"
+                    Clicked="btnElimiarEstudiante_Clicked"/>
+            <Button Text="Actualizar estudiante"
+                    x:Name="btnActualizarEstudiante"
+                    Clicked="btnActualizarEstudiante_Clicked"/>
+            <Button Text="Eliminar Estudiante por ID estudiante"
+                    x:Name="btnEliminarId"
+                    Clicked="btnEliminarId_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

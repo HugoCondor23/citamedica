@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EstudiantesITQ.EliminarEstudiamnte">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Eliminar Estudiante"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Ingrese Codigo"
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       FontAttributes="Bold"/>
+                <Entry x:Name="txtCodigo"
+                       Grid.Row="0"
+                       Grid.Column="1"
+                       Placeholder="Codigo"
+                       Keyboard="Numeric"/>
+
+                
+                <Button Text="Eliminar"
+                        Grid.Row="5"
+                        Grid.Column="0"
+                        x:Name="insertar"
+                        Clicked="insertar_Clicked"/>
+
+                <Button Text="Regresar"
+                        Grid.Row="5"
+                        Grid.Column="1"
+                        x:Name="btnRegreso"
+                        Clicked="btnRegreso_Clicked"/>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
